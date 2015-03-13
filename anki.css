@@ -1,0 +1,133 @@
+.card {
+    font-family: arial;
+    font-size: 20px;
+    text-align: center;
+    color: #d4cfc9;
+    background-color: #202020;
+    }
+
+.cloze {
+    font-weight: bold;
+    color: #CC6666;
+    /*color: #dc9656;*/
+    }
+
+.extra {
+    font-family: Arial; 
+    font-size: 75%;
+    color: #81A2BE;
+    }
+
+.bk-frt {
+    color: #d4cfc9;
+    font-size: 90%;
+    }
+
+.fade {
+    color: #7F7F7F;
+    }
+
+.bk-ans {
+    color: #B294BB;
+    }
+
+.win {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+.hyield{
+    font-family: "Source Code Pro";
+    font-weight: 200;
+    font-size: 90%; 
+    color: #CC6666;
+    /*text-shadow: 1px 1px 1px rgba(212, 207, 201, 0.8);*/
+    width: 60%;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: 10px;
+    }
+
+.img{
+    width: 30%;
+    margin-right:auto;
+    margin-left:auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 50%;
+    }
+
+.ss {
+    color: #81A2BE;
+    padding-top: 10px;
+    padding-bottom: 10px;   
+    }
+
+ul {
+    list-style-position: inside;
+    text-align:left;
+    display: inline-block;
+    margin-left: -50px;
+    line-height: 26px;
+    }
+
+ol {
+    list-style-position: inside;
+    text-align:left;
+    display: inline-block;
+    margin-left: -50px;
+    line-height: 26px;
+    }
+
+.tags {
+    color: #363636;
+    font-size: 60%;
+    text-align: left;
+    text-transform: uppercase;
+    }
+
+.noty-div {
+    width: 100%;
+    display: table;
+    /*border: 1px solid green;*/
+    }
+
+.frame1 {
+    height: 40px;
+    width: 80%;
+    /*border: 1px dashed gray;*/
+    text-align: center;
+    vertical-align: middle; 
+    margin: 0 0 0px 0;
+    float: left;
+    display: table-cell;
+    }
+
+.frame2 {
+    height: 40px;
+    width: 18%;    
+    text-align: center; 
+    margin: 0 0 0px 0;
+    float: right;
+    vertical-align: middle;
+    /*border: 1px solid black;*/
+    }
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    }
+
+.ntxt {
+    display: inline-block;
+    /*border: 1px dotted blue;*/
+    vertical-align: middle; 
+    }
+
+.nimg {
+    /*border: 1px dashed red;*/
+    max-height: 100%;
+    max-width: auto;
+    }

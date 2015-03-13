@@ -1,0 +1,225 @@
+<!------------------ CARD 1  ------------------>
+
+<!------------ FRONT SIDE  ------------>
+
+<link type="text/css" rel="stylesheet" href="../jquery/magnific/magnific-popup.css" />
+<link type="text/css" rel="stylesheet" href="../jquery/noty/animate.css" />
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../jquery/magnific/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="../jquery/zoom/jquery.zoom.min.js"></script>
+<script type="text/javascript" src="../jquery/noty/packaged/jquery.noty.packaged.min.js"></script>
+<script type="text/javascript" src="../jquery/noty/themes/drlulz.js"></script>
+
+<div class="win">
+	<div class="frt-ques">{{Front}}</div>
+	<div class="img">{{Front Image}}</div>
+	<div class="ss">{{Front S/S}}</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	var noty_text = '{{text:NotyFront}}';
+	if( noty_text != '' ) {
+		setTimeout(function() { 
+			var n = noty({ 
+				layout: 'topRight', 
+				theme: 'drlulz',
+				type: 'custom', 
+				text: '<div class="noty-div"><div class=frame1><span class="helper"></span><span class=ntxt>' + noty_text + '</span></div><div class=frame2 style=""><span class="helper"></span><img class="nimg" src="../man_sm.png" /></div></div>',
+				animation: { 
+					open: 'animated slideInRight', 
+					close: 'animated slideOutRight', 
+					easing: 'swing', speed: 500 }, 
+					timeout: '5000', 
+					closeWith: ['click'] 
+				}); 
+		}, 3000)
+	}
+	$("img").each(function() {
+	    var $this = $(this);
+	    var src = $this.attr('src');
+	    var a = $('<a/>').attr('href', src).attr('class', 'gallery');
+	    $this.wrap(a);
+	});
+
+	$('img')
+		.wrap('<span style="display:inline-block"></span>')
+		.parent()
+		.zoom();
+
+	$('.gallery').magnificPopup({type:'image'});
+});
+</script>
+
+
+
+<!------------ BACK SIDE  ------------>
+
+<link type="text/css" rel="stylesheet" href="../jquery/magnific/magnific-popup.css" />
+<link type="text/css" rel="stylesheet" href="../jquery/noty/animate.css" />
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../jquery/magnific/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="../jquery/zoom/jquery.zoom.min.js"></script>
+<script type="text/javascript" src="../jquery/noty/packaged/jquery.noty.packaged.min.js"></script>
+<script type="text/javascript" src="../jquery/noty/themes/drlulz.js"></script>
+
+<div class="win">
+	<div class="bk-frt">{{Front}}</div>
+
+	<hr id=answer>
+
+	<div class="bk-ans">{{Back}}</div>
+	<div class="ss">{{Back S/S}}</div>
+	<div class="img">{{Back Image}}</div>
+</div>
+
+<div class="tags">{{Tags}}</div>
+
+<script>
+$(document).ready(function(){
+	var noty_text = '{{text:NotyBack}}';
+	if( noty_text != '' ) {
+		setTimeout(function() { 
+			var n = noty({ 
+				layout: 'topRight', 
+				theme: 'drlulz',
+				type: 'custom', 
+				text: '<div class="noty-div"><div class=frame1><span class="helper"></span><span class=ntxt>' + noty_text + '</span></div><div class=frame2 style=""><span class="helper"></span><img class="nimg" src="../man_sm.png" /></div></div>',
+				animation: { 
+					open: 'animated slideInRight', 
+					close: 'animated slideOutRight', 
+					easing: 'swing', speed: 500 }, 
+					timeout: '5000', 
+					closeWith: ['click'] 
+				}); 
+		}, 3000)
+	}
+	$("img").each(function() {
+	    var $this = $(this);
+	    var src = $this.attr('src');
+	    var a = $('<a/>').attr('href', src).attr('class', 'gallery');
+	    $this.wrap(a);
+	});
+
+	$('img')
+		.wrap('<span style="display:inline-block"></span>')
+		.parent()
+		.zoom();
+
+	$('.gallery').magnificPopup({type:'image'});
+});
+</script>
+
+
+<!------------------ CARD 2  ------------------>
+
+<!------------ FRONT SIDE  ------------>
+
+<link type="text/css" rel="stylesheet" href="../jquery/magnific/magnific-popup.css" />
+<link type="text/css" rel="stylesheet" href="../jquery/noty/animate.css" />
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../jquery/magnific/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="../jquery/zoom/jquery.zoom.min.js"></script>
+<script type="text/javascript" src="../jquery/noty/packaged/jquery.noty.packaged.min.js"></script>
+<script type="text/javascript" src="../jquery/noty/themes/drlulz.js"></script>
+
+
+<div class="win">
+	<div class="frt-ques">{{Back}}</div>
+	<div class="ss">{{Back S/S}}</div>
+	<div class="img">{{Back Image}}</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	var noty_text = '{{text:NotyBack}}';
+	if( noty_text != '' ) {
+		setTimeout(function() { 
+			var n = noty({ 
+				layout: 'topRight', 
+				theme: 'drlulz',
+				type: 'custom', 
+				text: '<div class="noty-div"><div class=frame1><span class="helper"></span><span class=ntxt>' + noty_text + '</span></div><div class=frame2 style=""><span class="helper"></span><img class="nimg" src="../man_sm.png" /></div></div>',
+				animation: { 
+					open: 'animated slideInRight', 
+					close: 'animated slideOutRight', 
+					easing: 'swing', speed: 500 }, 
+					timeout: '5000', 
+					closeWith: ['click'] 
+				}); 
+		}, 3000)
+	}
+	$("img").each(function() {
+	    var $this = $(this);
+	    var src = $this.attr('src');
+	    var a = $('<a/>').attr('href', src).attr('class', 'gallery');
+	    $this.wrap(a);
+	});
+
+	$('img')
+		.wrap('<span style="display:inline-block"></span>')
+		.parent()
+		.zoom();
+
+	$('.gallery').magnificPopup({type:'image'});
+});
+</script>
+
+
+
+<!------------ BACK SIDE  ------------>
+
+<link type="text/css" rel="stylesheet" href="../jquery/magnific/magnific-popup.css" />
+<link type="text/css" rel="stylesheet" href="../jquery/noty/animate.css" />
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../jquery/magnific/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="../jquery/zoom/jquery.zoom.min.js"></script>
+<script type="text/javascript" src="../jquery/noty/packaged/jquery.noty.packaged.min.js"></script>
+<script type="text/javascript" src="../jquery/noty/themes/drlulz.js"></script>
+
+
+<div class="win">
+	<div class="bk-frt">{{Back}}</div>
+
+	<hr id=answer>
+	<div class="bk-ans">{{Front}}</div>
+	<div class="ss">{{Front S/S}}</div>
+	<div class="img">{{Front Image}}</div>
+</div>
+
+<div class="tags">{{Tags}}</div>
+
+<script>
+$(document).ready(function(){
+	var noty_text = '{{text:NotyFront}}';
+	if( noty_text != '' ) {
+		setTimeout(function() { 
+			var n = noty({ 
+				layout: 'topRight', 
+				theme: 'drlulz',
+				type: 'custom', 
+				text: '<div class="noty-div"><div class=frame1><span class="helper"></span><span class=ntxt>' + noty_text + '</span></div><div class=frame2 style=""><span class="helper"></span><img class="nimg" src="../man_sm.png" /></div></div>',
+				animation: { 
+					open: 'animated slideInRight', 
+					close: 'animated slideOutRight', 
+					easing: 'swing', speed: 500 }, 
+					timeout: '5000', 
+					closeWith: ['click'] 
+				}); 
+		}, 3000)
+	}
+	$("img").each(function() {
+	    var $this = $(this);
+	    var src = $this.attr('src');
+	    var a = $('<a/>').attr('href', src).attr('class', 'gallery');
+	    $this.wrap(a);
+	});
+
+	$('img')
+		.wrap('<span style="display:inline-block"></span>')
+		.parent()
+		.zoom();
+
+	$('.gallery').magnificPopup({type:'image'});
+});
+</script>
