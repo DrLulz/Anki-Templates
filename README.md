@@ -39,7 +39,7 @@ After unzipping move the folders `jquery` & `js`, and the file `man_sm.png` into
 <br />
 #### 4. Create / Modify Note Types
 
-![notes](readme_images/note_types.png)
+![notes](readme_images/types.png)
 
 You can either create new note types or modify existing types.
 
