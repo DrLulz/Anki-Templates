@@ -13,16 +13,17 @@ This repository adds extra funtionality and styling to Anki cards.
 When creating cards, if the Noty & URL fields are left blank they will not show when reviwing.
 
 <br />
-#### 1. Download the .zip of this repository (lower right)
+#### 1. Download the .zip of this repository (right sidebar)
 <br />
 #### 2. Locate your Anki user folder
 
-The default location is `/Anki/User 1`
-If you changed your username then `/Anki/DrLulz`
+The default location is `/Anki/User 1`  
+If you changed your username then `/Anki/DrLulz`  
 
 To ensure you’re in the right place look for directories
 - `/Anki/DrLulz/collection.media`
 - `/Anki/DrLulz/backups`
+
 <br />
 #### 3. Add jQuery directories and image file
 
