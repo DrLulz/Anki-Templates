@@ -99,6 +99,8 @@ Still in the note types window the Click the `Cards` button. On the left is the 
 <br />
 #### 8. Create cards & enjoy
 
+<br />
+<br />
 ### LaTeX Styling
 
 - LaTeX Equations Match the Background
