@@ -2,17 +2,17 @@
 
 ![gif](readme_images/anki.gif)
 
-This repository adds extra funtionality and styling to Anki cards. 
+This repository adds extra functionality and styling to Anki cards. 
 
 1. [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/) for Images
 2. Image [Zoom](http://www.jacklmoore.com/zoom/)
-3. Notifications via [Noty](http://ned.im/noty/#/about) (For Reenforcement)
-4. Dark Styling loosly based on [Tomorrow Night Theme](https://github.com/chriskempson/tomorrow-theme)
+3. Notifications via [Noty](http://ned.im/noty/#/about) (For Reinforcement)
+4. Dark Styling loosely based on [Tomorrow Night Theme](https://github.com/chriskempson/tomorrow-theme)
 5. URL button in cards
 
 ##### Notifications & URLs
 
-When creating cards, if the Noty & URL fields are left blank they will not show when reviwing.
+When creating cards, if the Noty & URL fields are left blank they will not show when reviewing.
 
 <br />
 #### 1. Download the .zip of this repository (right sidebar)
@@ -74,14 +74,14 @@ There are two defaults fields `front` and `back`. To use this template exactly y
 - `URL`
 - `URL Title`
 
-![notes](readme_images/new_fields.png)
 
 ##### Reposition the fields to match the picture.
+![notes](readme_images/new_fields.png)
 
 <br />
 #### 7. Add the HTML
 
-Still in the note types window the Click the `Cards` button. On the left is the `Front Template`, `Styling` and `Back Tempalte`. 
+Still in the note types window the Click the `Cards` button. On the left is the `Front Template`, `Styling` and `Back Template`. 
 
 ##### From `basic-single.html` 
 
