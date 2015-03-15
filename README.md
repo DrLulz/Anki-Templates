@@ -9,6 +9,7 @@ This repository adds extra functionality and styling to Anki cards.
 3. Notifications via [Noty](http://ned.im/noty/#/about) (For Reinforcement)
 4. Dark Styling loosely based on [Tomorrow Night Theme](https://github.com/chriskempson/tomorrow-theme)
 5. URL button in cards
+6. The jQuery is only available when reviewing on desktop, so the css image styling has been adjusted to show better on mobiles.
 
 ##### Notifications & URLs
 
