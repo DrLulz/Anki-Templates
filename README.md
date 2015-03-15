@@ -98,3 +98,20 @@ Still in the note types window the Click the `Cards` button. On the left is the 
 
 <br />
 #### 8. Create cards & enjoy
+
+### LaTeX Styling
+
+- LaTeX Equations Match the Background
+- So the equation `[$]SEM=\frac{\sigma}{\sqrt{{{c1::n}}}}[/$]` would display as:
+
+![latex](readme_images/latex_cloze.png)
+
+
+  
+- Optionally, you can color the cloze using HEX color code or naming basic colors:
+	- `[$]SEM=\frac{\sigma}{\sqrt{\color[HTML]{E8BF6A}{{c1::n}}}}[/$]`
+	![latex](readme_images/latex_cloze_color1.png)
+	
+	
+	- `[$]SEM=\frac{\sigma}{\sqrt{\color{green}{{c1::n}}}}[/$]`
+	![latex](readme_images/latex_cloze_color2.png)
