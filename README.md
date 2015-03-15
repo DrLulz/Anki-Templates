@@ -82,7 +82,7 @@ There are two defaults fields `front` and `back`. To use this template exactly y
 <br />
 #### 7. Add the HTML
 
-Still in the note types window the Click the `Cards` button. On the left is the `Front Template`, `Styling` and `Back Template`. 
+Still in the note types window click the `Cards` button. On the left is the `Front Template`, `Styling` and `Back Template`. 
 
 ##### From `basic-single.html` 
 
