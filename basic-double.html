@@ -1,6 +1,6 @@
 <!------------------ CARD 1  ------------------>
 
-<!------------ FRONT SIDE  ------------>
+<!------------ FRONT SIDE 1  ------------>
 
 <link type="text/css" rel="stylesheet" href="../jquery/magnific/magnific-popup.css" />
 <link type="text/css" rel="stylesheet" href="../jquery/noty/animate.css" />
@@ -10,10 +10,10 @@
 <script type="text/javascript" src="../jquery/noty/packaged/jquery.noty.packaged.min.js"></script>
 <script type="text/javascript" src="../jquery/noty/themes/drlulz.js"></script>
 
-<div class="win">
-	<div class="frt-ques">{{Front}}</div>
-	<div class="img">{{Front Image}}</div>
-	<div class="ss">{{Front S/S}}</div>
+<div class=win>
+	<div class=frt-ques>{{Front}}</div>
+	<div class=img>{{Front Image}}</div>
+	<div class=ss>{{Front S/S}}</div>
 </div>
 
 <script>
@@ -53,7 +53,7 @@ $(document).ready(function(){
 
 
 
-<!------------ BACK SIDE  ------------>
+<!------------ BACK SIDE 1  ------------>
 
 <link type="text/css" rel="stylesheet" href="../jquery/magnific/magnific-popup.css" />
 <link type="text/css" rel="stylesheet" href="../jquery/noty/animate.css" />
@@ -63,21 +63,23 @@ $(document).ready(function(){
 <script type="text/javascript" src="../jquery/noty/packaged/jquery.noty.packaged.min.js"></script>
 <script type="text/javascript" src="../jquery/noty/themes/drlulz.js"></script>
 
-<div class="win">
-	<div class="bk-frt">{{Front}}</div>
+<div class=win>
+	<div class=bk-frt>{{Front}}</div>
 
 	<hr id=answer>
 
-	<div class="bk-ans">{{Back}}</div>
-	<div class="ss">{{Back S/S}}</div>
-	<div class="img">{{Back Image}}</div>
+	<div class=bk-ans>{{Back}}</div>
+	<div class=ss>{{Back S/S}}</div>
+	<div class=img>{{Back Image}}</div>
 </div>
 
-<div class="tags">{{Tags}}</div>
+<div class=tags>{{Tags}}</div>
+
 
 <script>
 $(document).ready(function(){
 	var noty_text = '{{text:NotyBack}}';
+	var card_url  = '{{text:URL}}';
 	if( noty_text != '' ) {
 		setTimeout(function() { 
 			var n = noty({ 
@@ -94,7 +96,7 @@ $(document).ready(function(){
 				}); 
 		}, 3000)
 	}
-	$("img").each(function() {
+	$('img').each(function() {
 	    var $this = $(this);
 	    var src = $this.attr('src');
 	    var a = $('<a/>').attr('href', src).attr('class', 'gallery');
@@ -107,13 +109,17 @@ $(document).ready(function(){
 		.zoom();
 
 	$('.gallery').magnificPopup({type:'image'});
+	
+	if( card_url != '' ) {
+		$( '<div class=link><a href="{{text:URL}}" class="link-txt">{{text:URL Title}}</a></div>' ).insertAfter( '.tags' );
+	}
 });
 </script>
 
 
 <!------------------ CARD 2  ------------------>
 
-<!------------ FRONT SIDE  ------------>
+<!------------ FRONT SIDE 2  ------------>
 
 <link type="text/css" rel="stylesheet" href="../jquery/magnific/magnific-popup.css" />
 <link type="text/css" rel="stylesheet" href="../jquery/noty/animate.css" />
@@ -124,10 +130,10 @@ $(document).ready(function(){
 <script type="text/javascript" src="../jquery/noty/themes/drlulz.js"></script>
 
 
-<div class="win">
-	<div class="frt-ques">{{Back}}</div>
-	<div class="ss">{{Back S/S}}</div>
-	<div class="img">{{Back Image}}</div>
+<div class=win>
+	<div class=frt-ques>{{Back}}</div>
+	<div class=ss>{{Back S/S}}</div>
+	<div class=img>{{Back Image}}</div>
 </div>
 
 <script>
@@ -167,7 +173,7 @@ $(document).ready(function(){
 
 
 
-<!------------ BACK SIDE  ------------>
+<!------------ BACK SIDE 2  ------------>
 
 <link type="text/css" rel="stylesheet" href="../jquery/magnific/magnific-popup.css" />
 <link type="text/css" rel="stylesheet" href="../jquery/noty/animate.css" />
@@ -178,20 +184,21 @@ $(document).ready(function(){
 <script type="text/javascript" src="../jquery/noty/themes/drlulz.js"></script>
 
 
-<div class="win">
-	<div class="bk-frt">{{Back}}</div>
+<div class=win>
+	<div class=bk-frt>{{Back}}</div>
 
 	<hr id=answer>
-	<div class="bk-ans">{{Front}}</div>
-	<div class="ss">{{Front S/S}}</div>
-	<div class="img">{{Front Image}}</div>
+	<div class=bk-ans>{{Front}}</div>
+	<div class=ss>{{Front S/S}}</div>
+	<div class=img>{{Front Image}}</div>
 </div>
 
-<div class="tags">{{Tags}}</div>
+<div class=tags>{{Tags}}</div>
 
 <script>
 $(document).ready(function(){
-	var noty_text = '{{text:NotyFront}}';
+	var noty_text = '{{text:NotyBack}}';
+	var card_url  = '{{text:URL}}';
 	if( noty_text != '' ) {
 		setTimeout(function() { 
 			var n = noty({ 
@@ -208,7 +215,7 @@ $(document).ready(function(){
 				}); 
 		}, 3000)
 	}
-	$("img").each(function() {
+	$('img').each(function() {
 	    var $this = $(this);
 	    var src = $this.attr('src');
 	    var a = $('<a/>').attr('href', src).attr('class', 'gallery');
@@ -221,5 +228,9 @@ $(document).ready(function(){
 		.zoom();
 
 	$('.gallery').magnificPopup({type:'image'});
+	
+	if( card_url != '' ) {
+		$( '<div class=link><a href="{{text:URL}}" class="link-txt">{{text:URL Title}}</a></div>' ).insertAfter( '.tags' );
+	}
 });
 </script>

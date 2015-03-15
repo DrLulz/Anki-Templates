@@ -32,12 +32,12 @@
     }
 
 .win {
-    max-width: 70%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     }
 
-.hyield{
+.hyield {
     font-family: "Source Code Pro";
     font-weight: 200;
     font-size: 90%; 
@@ -49,7 +49,7 @@
     margin-top: 10px;
     }
 
-.img{
+.img {
     width: 30%;
     margin-right:auto;
     margin-left:auto;
@@ -85,6 +85,7 @@ ol {
     font-size: 60%;
     text-align: left;
     text-transform: uppercase;
+    margin-top: 20px;
     }
 
 .noty-div {
@@ -130,4 +131,44 @@ ol {
     /*border: 1px dashed red;*/
     max-height: 100%;
     max-width: auto;
+    }
+
+.link {
+    margin: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    float: right;
+    }
+
+.link-txt {
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 6px;
+    margin: 10px;
+    background-color: #262626;
+    font-size: 70%;
+    color: #363636;
+    }
+
+.link-txt:hover {
+    color: #d4cfc9;
+    text-decoration: underline;
+    background-color: #363636;
+    }
+
+@media screen and (max-width: 667px) {
+    .img {
+        width: 70%;
+        }
+    .win {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        }
+    }
+
+@media screen and (max-width: 375px) {
+    .img {
+        width: 100%;
+        }
     }
