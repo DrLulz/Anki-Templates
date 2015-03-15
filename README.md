@@ -12,8 +12,9 @@ This repository adds extra funtionality and styling to Anki cards.
 
 When creating cards, if the Noty & URL fields are left blank they will not show when reviwing.
 
+<br />
 #### 1. Download the .zip of this repository (lower right)
-
+<br />
 #### 2. Locate your Anki user folder
 
 The default location is `/Anki/User 1`
@@ -22,7 +23,7 @@ If you changed your username then `/Anki/DrLulz`
 To ensure you’re in the right place look for directories
 - `/Anki/DrLulz/collection.media`
 - `/Anki/DrLulz/backups`
-
+<br />
 #### 3. Add jQuery directories and image file
 
 After unzipping move the folders `jquery` & `js`, and the file `man_sm.png` into your user folder.
@@ -30,7 +31,7 @@ After unzipping move the folders `jquery` & `js`, and the file `man_sm.png` into
 - `/Anki/DrLulz/jquery`
 - `/Anki/DrLulz/js`
 - `/Anki/DrLulz/man_sm.png`
-
+<br />
 #### 4. Create / Modify Note Types
 
 You can either create new note types or modify existing types.
@@ -40,7 +41,7 @@ You can either create new note types or modify existing types.
 - Assign a unique name to the note type
 
 - In this tutorial we’ll add a basic note type using `basic-single.html`. When finished repeat this process for `basic-double.html` and `cloze.html`
-
+<br />
 #### 5. Add Header / Footer to Note Type
 
 Select your newly created deck, and click the `options` button.
@@ -50,12 +51,12 @@ Select your newly created deck, and click the `options` button.
 
 IMAGE
 
-
+<br />
 #### 6. Add Fields to Note Type
 
 There are two defaults fields `front` and `back`. To use this template exactly you will need to add eight more fields. You could of course modify this to suit your needs.
 
-###### Add the following fields:
+##### Add the following fields:
 
 - `Front S/S`
 - `Front Image`
@@ -66,22 +67,22 @@ There are two defaults fields `front` and `back`. To use this template exactly y
 - `URL`
 - `URL Title`
 
-###### Reposition the fields to match the picture.
+##### Reposition the fields to match the picture.
 
-
+<br />
 #### 7. Add the HTML
 
 Still in the note types window the Click the `Cards` button. On the left is the `Front Template`, `Styling` and `Back Tempalte`. 
 
-###### From `basic-single.html` 
+##### From `basic-single.html` 
 
 - Copy `lines 3-50` to the `Front Template` field
 - Copy `lines 56-114` to the `Back Template` field
 
 
-###### From `anki.css`
+##### From `anki.css`
 
 - Copy everything to the `Styling` field. 
 
-
+<br />
 #### 8. Create cards & enjoy
