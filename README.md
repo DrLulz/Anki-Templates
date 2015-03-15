@@ -52,7 +52,7 @@ You can either create new note types or modify existing types.
 <br />
 #### 5. Add Header / Footer to Note Type
 
-Select your newly created deck, and click the `options` button.
+Select your newly created note type, and click the `options` button.
 
 - In the .zip folder locate the file `header-footer.tex`. Optionally, you could just grab the text from the repository.
 - Copy `lines 1-11` to the header field, and `line 20` to the footer field.
