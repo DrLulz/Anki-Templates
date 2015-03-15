@@ -16,9 +16,15 @@ This repository adds extra functionality and styling to Anki cards.
 When creating cards, if the Noty & URL fields are left blank they will not show when reviewing.
 
 <br />
-#### 1. Download the .zip of this repository (right sidebar)
+
+#### 1. Install JS Booster Anki Addon
+
+- [JS Booster](https://ankiweb.net/shared/info/1280253613)
+
 <br />
-#### 2. Locate your Anki user folder
+#### 2. Download the .zip of this repository (right sidebar)
+<br />
+#### 3. Locate your Anki user folder
 
 The default location is `/Anki/User 1`  
 If you changed your username then `/Anki/DrLulz`  
@@ -28,7 +34,7 @@ To ensure you’re in the right place look for directories
 - `/Anki/DrLulz/backups`
 
 <br />
-#### 3. Add jQuery directories and image file
+#### 4. Add jQuery directories and image file
 
 After unzipping move the folders `jquery` & `js`, and the file `man_sm.png` into your user folder.
 
@@ -37,7 +43,7 @@ After unzipping move the folders `jquery` & `js`, and the file `man_sm.png` into
 - `/Anki/DrLulz/man_sm.png`
 
 <br />
-#### 4. Create / Modify Note Types
+#### 5. Create / Modify Note Types
 
 ![notes](readme_images/types.png)
 
@@ -50,7 +56,7 @@ You can either create new note types or modify existing types.
 - In this tutorial we’ll add a basic note type using `basic-single.html`. When finished repeat this process for `basic-double.html` and `cloze.html`
 
 <br />
-#### 5. Add Header / Footer to Note Type
+#### 6. Add Header / Footer to Note Type
 
 Select your newly created note type, and click the `options` button.
 
@@ -60,7 +66,7 @@ Select your newly created note type, and click the `options` button.
 ![notes](readme_images/options.png)
 
 <br />
-#### 6. Add Fields to Note Type
+#### 7. Add Fields to Note Type
 
 There are two defaults fields `front` and `back`. To use this template exactly you will need to add eight more fields. You could of course modify this to suit your needs.
 
@@ -80,7 +86,7 @@ There are two defaults fields `front` and `back`. To use this template exactly y
 ![notes](readme_images/new_fields.png)
 
 <br />
-#### 7. Add the HTML
+#### 8. Add the HTML
 
 Still in the note types window click the `Cards` button. On the left is the `Front Template`, `Styling` and `Back Template`. 
 
@@ -97,7 +103,7 @@ Still in the note types window click the `Cards` button. On the left is the `Fro
 ![cards](readme_images/cards.png)
 
 <br />
-#### 8. Create cards & enjoy
+#### 9. Create cards & enjoy
 
 <br />
 <br />
