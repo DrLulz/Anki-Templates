@@ -1,4 +1,6 @@
-# Anki Template Tweaks
+# DrLulz Anki Template
+
+![gif](readme_images/anki.gif)
 
 This repository adds extra funtionality and styling to Anki cards. 
 
@@ -36,6 +38,8 @@ After unzipping move the folders `jquery` & `js`, and the file `man_sm.png` into
 <br />
 #### 4. Create / Modify Note Types
 
+![notes](readme_images/note_types.png)
+
 You can either create new note types or modify existing types.
 
 - Go to `Tools > Manage Note Types`
@@ -52,7 +56,7 @@ Select your newly created deck, and click the `options` button.
 - In the .zip folder locate the file `header-footer.tex`. Optionally, you could just grab the text from the repository.
 - Copy `lines 1-11` to the header field, and `line 20` to the footer field.
 
-IMAGE
+![notes](readme_images/options.png)
 
 <br />
 #### 6. Add Fields to Note Type
@@ -70,6 +74,8 @@ There are two defaults fields `front` and `back`. To use this template exactly y
 - `URL`
 - `URL Title`
 
+![notes](readme_images/new_fields.png)
+
 ##### Reposition the fields to match the picture.
 
 <br />
@@ -86,6 +92,8 @@ Still in the note types window the Click the `Cards` button. On the left is the 
 ##### From `anki.css`
 
 - Copy everything to the `Styling` field. 
+
+![cards](readme_images/cards.png)
 
 <br />
 #### 8. Create cards & enjoy
