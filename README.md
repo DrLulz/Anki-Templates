@@ -31,6 +31,7 @@ After unzipping move the folders `jquery` & `js`, and the file `man_sm.png` into
 - `/Anki/DrLulz/jquery`
 - `/Anki/DrLulz/js`
 - `/Anki/DrLulz/man_sm.png`
+
 <br />
 #### 4. Create / Modify Note Types
 
@@ -41,6 +42,7 @@ You can either create new note types or modify existing types.
 - Assign a unique name to the note type
 
 - In this tutorial we’ll add a basic note type using `basic-single.html`. When finished repeat this process for `basic-double.html` and `cloze.html`
+
 <br />
 #### 5. Add Header / Footer to Note Type
 
