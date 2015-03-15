@@ -8,7 +8,7 @@ This repository adds extra funtionality and styling to Anki cards.
 4. Dark Styling loosly based on [Tomorrow Night Theme](https://github.com/chriskempson/tomorrow-theme)
 5. URL button in cards
 
-###### Notifications & URLs
+##### Notifications & URLs
 
 When creating cards, if the Noty & URL fields are left blank they will not show when reviwing.
 
