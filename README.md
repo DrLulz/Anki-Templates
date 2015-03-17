@@ -7,15 +7,46 @@ This repository adds extra functionality and styling to Anki cards.
 1. [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/) for Images
 2. Image [Zoom](http://www.jacklmoore.com/zoom/)
 3. Notifications via [Noty](http://ned.im/noty/#/about) (For Reinforcement)
-4. Dark Styling loosely based on [Tomorrow Night Theme](https://github.com/chriskempson/tomorrow-theme)
-5. URL button in cards
-6. The jQuery is only available when reviewing on desktop, so the css image styling has been adjusted to show better on mobiles.
+4. [Bootstrap](http://getbootstrap.com)
+5. Dark Styling loosely based on [Tomorrow Night Theme](https://github.com/chriskempson/tomorrow-theme)
+6. URL button in cards
+7. With the exception of bootstrap & styling, the plugins above will not load on mobile. (You can include their .js in the template if you want it on mobile)
 
-##### Notifications & URLs
 
-When creating cards, if the Noty & URL fields are left blank they will not show when reviewing.
+## Usage
+
+##### Magnific Popup & Zoom
+
+- All images will have popup and zoom enabled.  
+- Images placed in fields `Front Image` and `Back Image` will have their width limited/reduced.  
+-- With popup and zoom there's no need for full size images.  
 
 <br />
+##### Noty
+- Use sparingly.  
+- Anki doesn't allow linking cards (always showing card y after card x). There's good reason for [this](http://ankisrs.net/docs/manual.html#can-i-link-cards-together-add-dependencies-how-should-i-handle-synonyms). However, there are times when I'd like to be reminded of an related idea after answering a card, so this is where Noty is useful in Anki cards.  
+- The field `NotyFront` will display a notification on the front side, etc.  
+- If you leave fields `NotyFront` and `NotyBack` empty then no notification will be shown.  
+
+<br />
+##### URLs
+- URLs should be in the form `www.google.com` or `google.com` (ie leave out the `http://`).  
+- If present the link will display in the lower right.  
+
+<br />
+##### Cloze Cards
+- Cloze cards will automatically align to the left. If you type <kbd>center</kbd> in the field `class` then the card will center align.  
+
+<br />
+##### Basic & Basic-Double Cards
+- Basic cards will automatically align to the center. If you type <kbd>left</kbd> in the field `class` then the card will left align.  
+
+##### Other Notes
+- If you bold text when creating cards the css will automatically assign it a color.
+- The `Back` field on Basic cards is givin the same color as cloze deletions.
+
+<br />
+## Install
 
 #### 1. Install JS Booster Anki Addon
 
@@ -80,6 +111,7 @@ There are two defaults fields `front` and `back`. To use this template exactly y
 - `NotyBack`
 - `URL`
 - `URL Title`
+- `class`
 
 
 ##### Reposition the fields to match the picture.
@@ -107,7 +139,7 @@ Still in the note types window click the `Cards` button. On the left is the `Fro
 
 <br />
 <br />
-### LaTeX Styling
+## LaTeX Styling
 
 - LaTeX Equations Match the Background
 - So the equation `[$]SEM=\frac{\sigma}{\sqrt{{{c1::n}}}}[/$]` would display as:
@@ -123,3 +155,12 @@ Still in the note types window click the `Cards` button. On the left is the `Fro
 	
 	- `[$]SEM=\frac{\sigma}{\sqrt{\color{green}{{c1::n}}}}[/$]`
 	![latex](readme_images/latex_cloze_color2.png)
+	
+
+## Changelog
+
+````
+03.17.15
+	bootstrap
+	cleaned up css
+````
