@@ -41,6 +41,7 @@ This repository adds extra functionality and styling to Anki cards.
 ##### Basic & Basic-Double Cards
 - Basic cards will automatically align to the center. If you type <kbd>left</kbd> in the field `class` then the card will left align.  
 
+<br />
 ##### Other Notes
 - If you bold text when creating cards the css will automatically assign it a color.
 - The `Back` field on Basic cards is givin the same color as cloze deletions.
@@ -109,13 +110,13 @@ There are two defaults fields `front` and `back`. To use this template exactly y
 - `Back Image`
 - `NotyFront`
 - `NotyBack`
-- `URL`
 - `URL Title`
+- `URL`
 - `class`
 
 
 ##### Reposition the fields to match the picture.
-![notes](readme_images/new_fields.png)
+![notes](readme_images/fields.png)
 
 <br />
 #### 8. Add the HTML
@@ -124,8 +125,8 @@ Still in the note types window click the `Cards` button. On the left is the `Fro
 
 ##### From `basic-single.html` 
 
-- Copy `lines 3-50` to the `Front Template` field
-- Copy `lines 56-114` to the `Back Template` field
+- Copy `lines 3-71` to the `Front Template` field
+- Copy `lines 77-148` to the `Back Template` field
 
 
 ##### From `anki.css`
