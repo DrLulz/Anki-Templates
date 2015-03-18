@@ -126,7 +126,7 @@ Still in the note types window click the `Cards` button. On the left is the `Fro
 ##### From `basic-single.html` 
 
 - Copy `lines 3-71` to the `Front Template` field
-- Copy `lines 77-148` to the `Back Template` field
+- Copy `lines 77-150` to the `Back Template` field
 
 
 ##### From `anki.css`
