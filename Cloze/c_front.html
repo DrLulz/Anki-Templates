@@ -131,26 +131,28 @@ $(document).ready(function(){
         	});
     } //end else
 	
-	var hint = 	$('.cloze').text();
-	var matches = hint.match(/\[(.*?)\]/);
-	if (matches) {var submatch = matches[1];}
+	$('.cloze').each(function() {
+		var $this = $(this);
+		
+		var hint = 	$this.text();
+		var matches = hint.match(/\[(.*?)\]/);
+		if (matches) {var submatch = matches[1];}
 
-	if (submatch.indexOf('...') > -1) {
-	} else {
-
-		$('.cloze').each(function() {
-			var $this = $(this);
+		if (submatch.indexOf('...') > -1) {
+		} else {
 			var a = $('<a/>').attr('href', '#').attr('class', 'tip').attr('data-title', submatch).attr('data-location', 'right-bottom').attr('data-backcolor', '#6699cc').attr('data-shadow', '0').attr('style', 'outline:none;');
 			$this.wrap(a);
-			});
+			
+			$('.tip').each(function() { 
+				$(this).LiteTooltip( { 
+					title: $(this).find('.data-title').html()
+					}); 
+				});
 
-		$('.tip').each(function() { 
-			$(this).LiteTooltip( { 
-				title: $(this).find('.data-title').html()
-				}); 
-			});
-
-		$('.cloze').text('[tip]').attr('style', 'font-family: "Courier New", Courier, monospace;font-weight:100;');
-	}
+			$this.text('[tip]').attr('style', 'font-family: "Courier New", Courier, monospace;font-weight:100;');
+		}
+		
+	});
+	
 }); //end document ready
 </script>
