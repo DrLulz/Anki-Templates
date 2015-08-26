@@ -67,7 +67,9 @@ $(document).ready(function(){
 
 	// Move images to seperate div
     jQuery('.frontside img').detach().appendTo('#f-image')
+	jQuery('.note img').detach().appendTo('#f-image')
     jQuery('.back img').detach().appendTo('#b-image')
+	jQuery('.note-bk img').detach().appendTo('#b-image')
 	
 	// Add Bootstrap image handling
 	$('img:not(#star)').each(function() {
@@ -99,7 +101,7 @@ $(document).ready(function(){
 			callbacks: {
 				resize: function() {
 					var img = this.content.find('img');
-					img.css('max-height', parseFloat(img.css('max-height')) * 14);
+					img.css('max-height', parseFloat(img.css('max-height')) * 40);
 					}
 				},
 			image: {
@@ -108,7 +110,7 @@ $(document).ready(function(){
 			});
 			
         // Zoom Wrapper & Options
-		$('img').wrap('<span id="click" style="display:inline-block"></span>').parent().zoom({magnify: 1});
+		//$('img').wrap('<span id="click" style="display:inline-block"></span>').parent().zoom({magnify: 1});
 	
 	// Small Displays Use Panzoom (Pinch to Zoom)
     } else {
