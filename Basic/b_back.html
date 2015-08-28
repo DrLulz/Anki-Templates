@@ -54,8 +54,8 @@ $.noty.layouts.topRight={name:"topRight",options:{},container:{object:'<ul id="n
 <div class='container'>
 	<div class='row'>
 		<div class='col-xs-10 col-sm-8 col-xs-offset-1 col-sm-offset-2 center {{text:class}}'>
-			<div class='frontside'>{{Front}}</div>
-			<div class='note'>{{F Note}}</div>
+			<div class='frontside txt'>{{Front}}</div>
+			<div class='note note-ft-bk txt'>{{F Note}}</div>
 		</div>
 	</div>
 	<div class='row'>
@@ -64,8 +64,8 @@ $.noty.layouts.topRight={name:"topRight",options:{},container:{object:'<ul id="n
 	<div class='row'>
 		<div class='col-xs-10 col-sm-8 col-xs-offset-1 col-sm-offset-2 center {{text:class}}'>
 			<hr id=answer>
-			<div class='back'>{{Back}}</div>
-			<div class='note-bk'>{{B Note}}</div>
+			<div class='back txt'>{{Back}}</div>
+			<div class='note-bk txt'>{{B Note}}</div>
 		</div>
 	</div>
 	<div class='row'>
@@ -92,6 +92,29 @@ $(document).ready(function(){
     $('#star').each(function() {
         $(this).detach().insertAfter('.container');
 		});
+	
+	// Change Underline Color
+	$("u").each(function(index) {
+		var thisTD = this;
+		var newElement = $("<span class='underlined'></span>");
+		$.each(this.attributes, function(index) {
+			$(newElement).attr(thisTD.attributes[index].name, thisTD.attributes[index].value);
+			});
+		$(newElement).html($(this).html());
+		$(this).after(newElement).remove();
+		});
+		
+	// Change Bold Color & Weight
+	$('b').each(function(index) {
+		var thisTD = this;
+		var newElement = $("<span class='bold'></span>");
+		$.each(this.attributes, function(index) {
+			$(newElement).attr(thisTD.attributes[index].name, thisTD.attributes[index].value);
+			});
+		$(newElement).html($(this).html());
+		$(this).after(newElement).remove();
+		});
+
 		
 	// Display Images Differently Based on Screen Size
 	// Large Displays Use Magnific Popup and Zoom on Hover		
@@ -179,7 +202,7 @@ $(document).ready(function(){
     // Add URL if exists
     var card_url  = '{{text:http}}';
     if( card_url != '' ) {
-        $( '<div class=link><a href="http://{{text:http}}" class="link-txt" style="outline:none;">LINK</a></div>' ).insertAfter( '.tags' );
+        $( '<div class=link><a href="{{text:http}}" class="link-txt" style="outline:none;">LINK</a></div>' ).insertAfter( '.tags' );
     	}
     
     // Add Video if exists
