@@ -95,29 +95,29 @@ $(document).ready(function(){
 
 
 	$('.txt').each(function() {
-		var $this    = $(this);
+	    var $this    = $(this);
 	    var elem_txt = $this.text();
-	    var matches  = elem_txt.match(/(\S+)\s*\s*(\{\S+\})/);
+	    var matches  = elem_txt.match(/(\S+)\s*\s*(\[\[\S+\]\])/);
 
-		if (matches) {
-	    	var both = matches[0]; 
-	    	var word = matches[1];
-	    	var hint = matches[2];
-	    	var tip  = hint.replace(/[{}]/g, '');
+	    if (matches) {
+	        var both = matches[0]; 
+	        var word = matches[1];
+	        var hint = matches[2];
+	        var tip  = hint.replace(/[\[\[\]\]']+/g,'')
 
-			var tip_html = '<span class="tip" data-title="'+tip+'" data-location="right-bottom" data-backcolor="#6699cc" data-shadow="0" style="outline:none">'+word+'</span>';
-		    var new_txt = elem_txt.replace(both, word);
-		    var new_html = new_txt.replace(word, tip_html);
+	        var tip_html = '<span class="tip" data-title="'+tip+'" data-location="right-bottom" data-backcolor="#6699cc" data-shadow="0" style="outline:none">'+word+'</span>';
+	        var new_txt = elem_txt.replace(both, word);
+	        var new_html = new_txt.replace(word, tip_html);
 
-			$this.html(new_html);
-		
-			$('.tip').each(function() { 
-				$(this).LiteTooltip( { 
-					title: $(this).find('.data-title').html()
-				}); 
-			});
-	
-		}
+	        $this.html(new_html);
+
+	        $('.tip').each(function() { 
+	            $(this).LiteTooltip( { 
+	                title: $(this).find('.data-title').html()
+	            }); 
+	        });
+
+	    }
 
 	});
 	
