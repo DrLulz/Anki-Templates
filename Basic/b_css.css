@@ -44,7 +44,7 @@ hr {
 
 .extra {
 	font-size: 90%;
-	color: #81A2BE;}
+	color: #B294BB;}
 
 .tags {
 	color: #363636;
@@ -116,6 +116,25 @@ ol {display:inline-block;}
 
 
 /*
+ * TOOLTIP
+*/
+.tip{
+    position: relative;
+    padding-bottom: 0px;
+    text-decoration: none;}
+	
+.tip::after{
+    content:'';
+    position:absolute;
+    width: 100%;
+    height: 0;    
+    left:0;
+    bottom: 1px;
+    border-bottom: 1px dashed #716C6C;}
+
+
+
+/*
  * SPECIAL ANKI FIELDS
 */
 .center {text-align:center;}
@@ -129,7 +148,7 @@ ol {display:inline-block;}
 .note-ft-bk {font-size:60%;}
 
 .note-bk {
-	color: #81A2BE;
+	color: #B294BB;
 	font-size: 90%;	
 	margin-bottom: 5px;}
 

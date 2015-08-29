@@ -70,6 +70,38 @@ $(document).ready(function(){
     $('#star').each(function() {
         $(this).detach().insertAfter('.container');
 		});
+				
+	// Tooltips
+	$('.txt').each(function() {
+	    var $this = $(this);
+	    var str   = $this.html();
+	    var myRe  = /(\S+)\[\[(.*?)\]\]/g;
+
+	    var matches;
+
+	    while ((matches = myRe.exec(str)) !== null) {
+
+	        var both = matches[0];
+	        var word = matches[1];
+	        var hint = matches[2];
+
+	        var tip_html = '<span class="tip" data-title="'+hint+'" data-location="right-bottom" data-backcolor="#6699cc" data-shadow="0" style="outline:none">'+word+'</span>';
+
+	        // replace whole match with just displayed word
+	        var new_txt = str.replace(both, word);
+
+	        // replace the word with tip_html for tooltip
+	        var str = new_txt.replace(word, tip_html);
+	    }
+
+	    $this.html(str);
+
+	    $('.tip').each(function() { 
+	        $(this).LiteTooltip( { 
+	            title: $(this).find('.data-title').html()
+	        }); 
+	    });
+	});
 	
 	// Change Underline Color
 	$('u').each(function(index) {
@@ -81,7 +113,7 @@ $(document).ready(function(){
 		$(newElement).html($(this).html());
 		$(this).after(newElement).remove();
 		});
-	
+		
 	// Change Bold Color & Weight
 	$('b').each(function(index) {
 		var thisTD = this;
@@ -92,35 +124,7 @@ $(document).ready(function(){
 		$(newElement).html($(this).html());
 		$(this).after(newElement).remove();
 		});
-
-
-	$('.txt').each(function() {
-	    var $this    = $(this);
-	    var elem_txt = $this.text();
-	    var matches  = elem_txt.match(/(\S+)\s*\s*(\[\[\S+\]\])/);
-
-	    if (matches) {
-	        var both = matches[0]; 
-	        var word = matches[1];
-	        var hint = matches[2];
-	        var tip  = hint.replace(/[\[\[\]\]']+/g,'')
-
-	        var tip_html = '<span class="tip" data-title="'+tip+'" data-location="right-bottom" data-backcolor="#6699cc" data-shadow="0" style="outline:none">'+word+'</span>';
-	        var new_txt = elem_txt.replace(both, word);
-	        var new_html = new_txt.replace(word, tip_html);
-
-	        $this.html(new_html);
-
-	        $('.tip').each(function() { 
-	            $(this).LiteTooltip( { 
-	                title: $(this).find('.data-title').html()
-	            }); 
-	        });
-
-	    }
-
-	});
-	
+		
 	// Display Images Differently Based on Screen Size
 	// Large Displays Use Magnific Popup and Zoom on Hover
     if ($(window).width() > 667) {

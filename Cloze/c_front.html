@@ -45,8 +45,8 @@ return!0}function Q(a,b,d,e){if(m.acceptData(a)){var f,g,h=m.expando,i=a.nodeTyp
 <div class='container'>
 	<div class='row'>
 		<div id='main' class='col-xs-10 col-sm-8 col-xs-offset-1 col-sm-offset-2 center {{text:class}}'>
-			<div class='front'>{{cloze:Text}}</div>
-			<div class='note'>{{F Note}}</div>
+			<div class='front txt'>{{cloze:Text}}</div>
+			<div class='note txt'>{{F Note}}</div>
 		</div>
 	</div>
 	<div class='row'>
@@ -70,7 +70,62 @@ $(document).ready(function(){
     $('#star').each(function() {
         $(this).detach().insertAfter('.container');
 		});
+
+	// Tooltips
+	$('.txt').each(function() {
+	    var $this = $(this);
+	    var str   = $this.html();
+	    var myRe  = /(\S+)\[\[(.*?)\]\]/g; //matches [[]]
+
+	    var matches;
+
+	    while ((matches = myRe.exec(str)) !== null) {
+
+	        var both = matches[0];
+	        var word = matches[1];
+	        var hint = matches[2];
+
+	        var tip_html = '<span class="tip" data-title="'+hint+'" data-location="right-bottom" data-backcolor="#6699cc" data-shadow="0" style="outline:none">'+word+'</span>';
+
+	        // replace whole match with just displayed word
+	        var new_txt = str.replace(both, word);
+
+	        // replace the word with tip_html for tooltip
+	        var str = new_txt.replace(word, tip_html);
+	    }
+
+	    $this.html(str);
+
+	    $('.tip').each(function() { 
+	        $(this).LiteTooltip( { 
+	            title: $(this).find('.data-title').html()
+	        }); 
+	    });
+	});
 	
+	// Change Underline Color
+	$('u').each(function(index) {
+		var thisTD = this;
+		var newElement = $("<span class='underlined'></span>");
+		$.each(this.attributes, function(index) {
+			$(newElement).attr(thisTD.attributes[index].name, thisTD.attributes[index].value);
+			});
+		$(newElement).html($(this).html());
+		$(this).after(newElement).remove();
+		});
+
+	
+	// Change Bold Color & Weight
+	$('b').each(function(index) {
+		var thisTD = this;
+		var newElement = $("<span class='bold'></span>");
+		$.each(this.attributes, function(index) {
+			$(newElement).attr(thisTD.attributes[index].name, thisTD.attributes[index].value);
+			});
+		$(newElement).html($(this).html());
+		$(this).after(newElement).remove();
+		});
+		
 	// Display Images Differently Based on Screen Size
 	// Large Displays Use Magnific Popup and Zoom on Hover
     if ($(window).width() > 667) {
@@ -130,31 +185,5 @@ $(document).ready(function(){
             	});
         	});
     } //end else
-
-	/*
-	$('.cloze').each(function() {
-		var $this = $(this);
-		
-		var hint = 	$this.text();
-		var matches = hint.match(/\[(.*?)\]/);
-		if (matches) {var submatch = matches[1];}
-
-		if (submatch.indexOf('...') > -1) {
-		} else {
-			var a = $('<a/>').attr('href', '#').attr('class', 'tip').attr('data-title', submatch).attr('data-location', 'right-bottom').attr('data-backcolor', '#6699cc').attr('data-shadow', '0').attr('style', 'outline:none;');
-			$this.wrap(a);
-			
-			$('.tip').each(function() { 
-				$(this).LiteTooltip( { 
-					title: $(this).find('.data-title').html()
-					}); 
-				});
-
-			$this.text('[tip]').attr('style', 'font-family: "Courier New", Courier, monospace;font-weight:100;');
-		}
-		
-	});
-	*/
-	
 }); //end document ready
 </script>
