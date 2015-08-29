@@ -100,8 +100,22 @@ img {}
  * LISTS
 */
 li {text-align:left;}
-ul {display:inline-block;}
-ol {display:inline-block;}
+ol, ul {display:inline-block;}
+
+ul > ul, ol > ol,
+ul > ol, ol > ul {
+	display:block;
+	margin-top: 5px;
+	}
+
+ul > li, ol > li {
+	margin-top: 5px;
+}
+
+ul > ul > li, ol > ol > li,
+ul > ol > li, ol > ul > li {
+	margin-top: 0px;
+}
 
 
 
