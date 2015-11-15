@@ -88,6 +88,8 @@ $(document).ready(function(){
 	jQuery('.note img').detach().appendTo('#f-image')
     jQuery('.extra img').detach().appendTo('#b-image')
 	
+	$('.cloze').addClass('highlight');
+	
 	// Add Bootstrap image handling
 	$('img:not(#star)').each(function() {
 		$(this).addClass('img-responsive center-block');
